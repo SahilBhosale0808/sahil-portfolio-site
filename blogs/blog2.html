@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs | readlineSync</title>
+    <link rel="stylesheet" href="/blogs/blogstyle.css">
+</head>
+
+<body>
+
+    <nav class="navigation container">
+        <div class="nav-brand">A directory of wonderful things</div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link link-active" href="/blogs.html">Home</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container container-center spaces">
+        <h1>Technical Blog: readlineSync library</h1>
+        <small>25th March,2022</small>
+        <p>Hello everyone, Hope you all are doing well! Today I am writing a blog on a npm library <span><b>readlineSync</b></span>. So without any further delay , let me tell you what all I understood about readlineSync when I read about it from the npmjs docs</p>
+
+        <p>To install it you can use the following command - <br>
+        <i>npm i readline-sync</i></p>
+
+        <p>So to start with readlineSync is used to communicate with user via a console.
+            In a CLI application - we use readlineSync npm library to read user input.
+        </p>
+        <h4>For example</h4>
+        <section class="section ow">
+        <div class="container container-center">
+            <p>var readlineSync = <span style="color: purple;">require</span>(<span style="color: green;">'readline-sync'</span>);
+                <br>
+                var name = <span style="color: green;">readlineSync</span>.<span style="color: red;">question</span>('What's your name?')
+                console.<span style="color: purple;">log</span>('Whatsup!' + name + 'Welcome')
+
+                <h4>Output</h4>
+                <p>What's your name? Sahil<br>
+                Whatsup! Sahil Welcome</p>
+
+            </p>
+        </div>
+        </section>
+
+        <p>So now we know the basic idea of what readlineSync is , lets see some functions in readline-sync library. We will see some basic methods </p>
+
+
+        <ol>
+            <li>
+                <p>
+                    <h4>question</h4>
+                    <p>In this method, as we saw in above example, it displays a query to user and then returns the
+                        input of user that he/she has entered after the user presses the <b>Enter</b> key</p>
+                </p>
+            </li>
+
+            <li>
+                <p> Moving on to next method,<br>
+                    <h4>keyInYN</h4>
+                    <p>In this method, it displays a query to the user , it returns <b>true</b> if <b>'Y'</b> or<b>'y'</b> is pressed, for other inputs , it returns false. Note that the userhas no chance to change the input.</p>
+
+                    <section class="section ow">
+                        <div class="container container-center">
+                            <p>var readlineSync = <span style="color: purple;">require</span>(<span
+                                    style="color: green;">'readline-sync'</span>);
+                                <br>
+                                if (<span style="color: green;">readlineSync</span>.<span
+                                    style="color: red;">keyInYN</span>('Do you like Football')){<br>
+                                    <span style="color: teal;">// Y key was pressed</span><br>
+                                console.<span style="color: purple;">log</span>('Cool, its a great sport');
+                                } else { <br>
+                                <span style="color: teal;">// Another key was pressed</span><br>
+                                console.<span style="color: purple;">log</span>('Ahh, my bad');
+                                    
+                            </p>
+                        </div>
+                    </section>
+                </p>
+            </li>
+
+            <li>
+                <p>
+                <h4>keyInSelect</h4>
+                <p>
+                   This method is used to prompt a user to choose an item from a list. The function
+                   will return the number the user selected. The user doesn’t have to press the Enter button when we use this function.
+                </p>
+                 <section class="section ow">
+                     <div class="container container-center">
+                         <p>var readlineSync = <span style="color: purple;">require</span>(<span
+                                 style="color: green;">'readline-sync'</span>);
+                             <br>
+                            let players = ['Ronaldo', 'Messi', 'Neymar', 'Pele', 'Maradona'];<br>
+
+                            let index = readlineSync.keyInSelect(players, 'Favorite Player?');<br>
+                            console.<span style="color: purple;">log </span>(players[index]);<br>
+
+                            <h4>Output</h4>
+                            [1] Ronaldo <br>
+                            [2] Messi <br>
+                            [3] Neymar <br>
+                            [4] Pele <br>
+                            [5] Maradona <br>
+                            [0] CANCEL <br>
+
+                            Favorite Player?: 1 <br>
+                            Ronaldo
+                         </p>
+                     </div>
+                 </section>            
+                </p>
+            </li>
+        </ol>
+
+        <p>Thats it thats all I learned about readlinesync , hope you guys are clear to with the readline library and are aware about its function after reading the blog. <br><br>These are some  basic functions of readlineSync library, you can use Utility functions which are advanced basic functions for more efficiency. <br>
+        <b>To know more about readlineSync -</b> <br><br>
+        <a class="link link-primary" href="https://www.npmjs.com/package/readline-sync">readlineSync Document</a>
+
+        <h2>Thank you!</h2>
+
+
+        </p>
+
+        <br>
+        <br>
+
+        <a class="link link-secondary" href="/blogs.html">Go Back</a>
+
+
+    </div>
+    <br>
+    <footer class="footer">
+        <div class="footer-header">Connect with me on</div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline"><a class="link" href="https://github.com/SahilBhosale0808">GitHub</a></li>
+            <li class="list-item-inline"><a class="link" href="https://twitter.com/imSahil2727">Twitter</a></li>
+            <li class="list-item-inline"><a class="link" href="www.linkedin.com/in/sahil-bhosale">LinkedIn</a></li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
