@@ -167,6 +167,10 @@ hr {
     color: white;
 }
 
+.footer-project i {
+    font-size: 20px;
+}
+
 i{
     font-size: 50px;
     margin-right: 40px;
